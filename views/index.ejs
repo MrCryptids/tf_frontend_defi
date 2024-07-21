@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True Freeze</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <%- include('./partials/header') %>
+    <div id="main-content" class="main-content">
+        <div id="landing" class="content-section" style="display: block;">
+            <%- include('./pages/landing') %>
+        `       
+        </div>
+        <div id="lockFreezer" class="content-section" style="display: none;">
+            <%- include('./pages/lockFreezer') %>
+        </div>
+        <div id="viewFreezers" class="content-section" style="display: none;">
+            <%- include('./pages/viewFreezers') %>
+        </div>
+        <div id="stakeFRZ" class="content-section" style="display: none;">
+            <%- include('./pages/stakeFRZ') %>
+        </div>
+        <div id="crvFactory" class="content-section" style="display: none;">
+            <%- include('./pages/crvFactory') %>
+        </div>
+        <div id="wrapUnwrapETH" class="content-section" style="display: none;">
+            <%- include('./pages/wrapUnwrapETH') %>
+        </div>
+        <div id="documentation" class="content-section" style="display: none;">
+            <%- include('./pages/documentation') %>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let scrollPercent = 0;
+
+            function autoScroll() {
+                const landingSection = document.getElementById('landing');
+                if (landingSection.style.display !== 'none') {
+                    scrollPercent += 20;
+                    if (scrollPercent >= 100) {
+                        scrollPercent = 0;
+                    }
+                    const scrollPosition = (document.documentElement.scrollHeight - document.documentElement.clientHeight) * (scrollPercent / 100);
+                    window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+                    console.log("Landing Scroll...")
+                }
+            }
+
+            setInterval(autoScroll, 10000); // Scroll every 10 seconds
+        });
+    </script>
+    <script src="/script.js"></script>
+</body>
+</html>

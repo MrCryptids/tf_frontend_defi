@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background: url('/images/gradientbg.png') no-repeat center center fixed;
+    background-size: cover;
+    transition: background 0.5s;
+    background-color: rgb(89, 134, 148);
+    color: bisque;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 5%;
+    margin: 20px 0 0 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+    padding: 10px;
+    text-align: center;
+    background-color: #1963a866; /* Slightly lighter blue */
+    border-radius: 9px;
+    cursor: pointer;
+    border: 1px solid snow;
+}
+
+.sidebar nav ul li:hover {
+    background-color: #1963a8c9; /* Slightly lighter blue */
+}
+
+.main-content {
+    margin-left: 270px; /* Width of the sidebar + some padding */
+    padding: 20px;
+    flex-grow: 1;
+    transition: background 0.5s;
+    margin-top: 100px;
+}
+
+.content-section {
+    display: none; /* Hide sections by default */
+}
