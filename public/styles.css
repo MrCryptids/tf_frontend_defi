@@ -199,6 +199,14 @@ body {
     stroke: snow ;
 }
 
+#lazy-iframe {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#lazy-iframe.loaded {
+    opacity: 1;
+}
 
 @keyframes moveSquare {
     0% { transform: translateX(0); }

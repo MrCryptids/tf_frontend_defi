@@ -51,3 +51,27 @@ document.addEventListener('DOMContentLoaded', function () {
     // Show the default section (landing)
     showSection('landing');
 });
+
+function lazyLoadIframe(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const iframe = entry.target;
+            iframe.src = iframe.getAttribute('data-src');
+            iframe.onload = () => {
+                iframe.classList.add('loaded');
+            };
+            observer.unobserve(iframe);
+        }
+    });
+}
+
+// Create an IntersectionObserver instance
+const observer = new IntersectionObserver(lazyLoadIframe, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+});
+
+// Observe the iframe element
+const iframe = document.getElementById('lazy-iframe');
+observer.observe(iframe);
