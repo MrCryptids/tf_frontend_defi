@@ -9,7 +9,7 @@ body {
     background-size: cover;
     transition: background 0.5s;
     background-color: rgb(89, 134, 148);
-    color: bisque;
+    color:honeydew;
 }
 
 .walletConnectBar {
@@ -17,7 +17,7 @@ body {
     top: 0;
     right: 0;
     margin-right: 3%;
-    margin-top: 1.5%;
+    margin-top: 1.7%;
 }
 
 .walletBttns {
@@ -31,14 +31,28 @@ body {
 }
 
 .sidebar {
-    width: 250px;
+    width: 200px;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     color: white;
     padding: 20px;
+    padding-left: 3%;
 }
+
+@media (max-width: 768px) {
+    .sidebar {
+      width: 20%; 
+      height: auto; 
+    }
+    .sidebar nav ul li {
+        width: max-content;
+    }
+
+
+  }
+  
 
 .sidebar h1 {
     font-size: 24px;
@@ -76,18 +90,35 @@ body {
     margin-top: 100px;
 }
 
+.mc-box {
+    padding-left: 5%;
+}
+
 .content-section {
     display: none; /* Hide sections by default */
+}
+
+.balance-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.balance-box img {
+    width: 15%;
 }
 
 .lander {
     transition: opacity 0.5s ease-in-out;
     opacity: 1;
+    width: 100vw; /* Full width of the viewport */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
     
 }
 
 .titlelogo {
-    margin-top: 2%;
+    margin-top: 3%;
 }   
 
 @keyframes moveSquare {
