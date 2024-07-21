@@ -1,12 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     display: flex;
     background: url('/images/gradientbg.png') no-repeat center center fixed;
     background-size: cover;
     transition: background 0.5s;
     background-color: rgb(89, 134, 148);
     color: bisque;
+}
+
+.walletConnectBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-right: 3%;
+    margin-top: 1.5%;
+}
+
+.walletBttns {
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 4px double snow;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .sidebar {
@@ -58,3 +79,40 @@ body {
 .content-section {
     display: none; /* Hide sections by default */
 }
+
+.lander {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    
+}
+
+.titlelogo {
+    margin-top: 2%;
+}   
+
+@keyframes moveSquare {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(90px); }
+    100% { transform: translateX(90px); opacity: 1; }
+  }
+  
+  @keyframes fadeSquare {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  @keyframes closeDoor {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50px); }
+  }
+  
+  #square {
+    animation: moveSquare 3s forwards, fadeSquare 2s forwards 3s;
+    animation-delay: 2s;
+  }
+  
+  #fridge-door {
+    animation: closeDoor 2s forwards 3s;
+    animation-delay: 2s;
+  }
+  
