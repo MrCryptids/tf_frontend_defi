@@ -194,6 +194,31 @@ body {
     font-size: 1.1em;
 }
 
+.sbc-stat-sectional {
+    display: grid;
+    justify-items: center;
+    margin-top: 3%;
+}
+
+.pageTitle h2{
+    font-size: 3em;
+    margin: auto;
+}
+.pageTitle {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1963a814; /* Slightly lighter blue */
+    border: white 1px solid;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.yr {
+    align-self: center;
+    font-weight: 200;
+    font-size: 1.75em;
+}
+
 #fridgeIcon {
     max-width: 25%;
     stroke: snow ;
