@@ -26,10 +26,11 @@ body {
     text-align: center;
     border-radius: 3px;
     cursor: pointer;
-    border: 4px double snow;
+    border: 4px double rgba(255, 250, 250, 0.69);
     padding: 10px;
     padding-left: 30px;
     padding-right: 30px;
+    background-color: rgba(255, 255, 255, 0.69);
 }
 
 .sidebar {
@@ -74,7 +75,7 @@ body {
     margin: 15px 0;
     padding: 10px;
     text-align: center;
-    background-color: #1963a866; /* Slightly lighter blue */
+    background-color: #1963a839; /* Slightly lighter blue */
     border-radius: 9px;
     cursor: pointer;
     border: 1px solid snow;
@@ -139,6 +140,25 @@ body {
 .titlelogo {
     margin-top: 3%;
 }   
+
+.navbttnicon {
+    justify-self: center;
+    align-self: center; 
+    padding: 5px;
+}
+
+.navbttnwrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.1em;
+}
+
+#fridgeIcon {
+    max-width: 25%;
+    stroke: snow ;
+}
+
 
 @keyframes moveSquare {
     0% { transform: translateX(0); }
