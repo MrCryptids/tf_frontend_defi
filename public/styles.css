@@ -18,6 +18,8 @@ body {
     right: 0;
     margin-right: 3%;
     margin-top: 1.7%;
+    display: flex;
+    align-items: center;
 }
 
 .walletBttns {
@@ -96,6 +98,13 @@ body {
 
 .content-section {
     display: none; /* Hide sections by default */
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+}
+
+.content-section.show {
+    opacity: 1;
+    display: block;
 }
 
 .balance-box {
@@ -115,6 +124,16 @@ body {
     height: auto; /* Maintain aspect ratio */
     max-width: 100%;
     
+}
+
+#doclink {
+    text-decoration: none;
+    color: inherit;
+}
+
+#lplink {
+    text-decoration: none;
+    color: inherit;
 }
 
 .titlelogo {
