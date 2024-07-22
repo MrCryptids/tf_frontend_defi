@@ -1,11 +1,57 @@
+const backgrounds = {
+    'STAKE': '/images/gradientbgblue.png',
+    'BURN': '/images/gradientbgred.png',
+    'CLAIM': '/images/gradientbggreen.png'
+};
+
+function selectAction(action) {
+    // Hide all sections
+    document.getElementById('stakeSection').style.display = 'none';
+    document.getElementById('burnSection').style.display = 'none';
+    document.getElementById('claimSection').style.display = 'none';
+
+    // Show the relevant section based on the selected action
+    if (action === 'STAKE') {
+        document.getElementById('stakeSection').style.display = 'block';
+    } else if (action === 'BURN') {
+        document.getElementById('burnSection').style.display = 'block';
+    } else if (action === 'CLAIM') {
+        document.getElementById('claimSection').style.display = 'block';
+    }
+
+    // Update the dropdown text
+    document.getElementById('actionSpan').innerText = action;
+
+    // Change the background image
+    document.body.style.backgroundImage = `url(${backgrounds[action]})`;
+}
+
+document.getElementById('actionSpan').addEventListener('click', function() {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    const overlay = document.getElementById('overlay');
+    const isVisible = dropdownMenu.style.display === 'block';
+    dropdownMenu.style.display = isVisible ? 'none' : 'block';
+    overlay.style.display = isVisible ? 'none' : 'block';
+});
+
+document.addEventListener('click', function(event) {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    const actionSpan = document.getElementById('actionSpan');
+    const overlay = document.getElementById('overlay');
+    if (!actionSpan.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.style.display = 'none';
+        overlay.style.display = 'none';
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     const navItems = document.querySelectorAll('.sidebar nav ul li');
     const body = document.body;
 
     const backgrounds = {
-        'nav-lockFreezer': '/images/gradientbgblue.png',
-        'nav-viewFreezers': '/images/gradientbggreen.png',
-        'nav-stakeBurn': '/images/gradientbgred.png',
+        'nav-lockFreezer': '/images/gradientbg.png',
+        'nav-viewFreezers': '/images/gradientbg.png',
+        'nav-stakeBurn': '/images/gradientbgblue.png',
         'nav-crvFactory': '/images/gradientbg.png',
         'nav-wrapUnwrapETH': '/images/gradientbg.png',
         'nav-documentation': '/images/gradientbg.png',
@@ -75,46 +121,3 @@ const observer = new IntersectionObserver(lazyLoadIframe, {
 // Observe the iframe element
 const iframe = document.getElementById('lazy-iframe');
 observer.observe(iframe);
-
-function selectAction(action) {
-    document.getElementById('actionSpan').textContent = action;
-    document.getElementById('dropdownMenu').style.display = 'none';
-    document.getElementById('overlay').style.display = 'none';
-}
-
-document.getElementById('actionSpan').addEventListener('click', function() {
-    const dropdownMenu = document.getElementById('dropdownMenu');
-    const overlay = document.getElementById('overlay');
-    const isVisible = dropdownMenu.style.display === 'block';
-    dropdownMenu.style.display = isVisible ? 'none' : 'block';
-    overlay.style.display = isVisible ? 'none' : 'block';
-});
-
-document.addEventListener('click', function(event) {
-    const dropdownMenu = document.getElementById('dropdownMenu');
-    const actionSpan = document.getElementById('actionSpan');
-    const overlay = document.getElementById('overlay');
-    if (!actionSpan.contains(event.target) && !dropdownMenu.contains(event.target)) {
-        dropdownMenu.style.display = 'none';
-        overlay.style.display = 'none';
-    }
-});
-
-function selectAction(action) {
-    // Hide all sections
-    document.getElementById('stakeSection').style.display = 'none';
-    document.getElementById('burnSection').style.display = 'none';
-    document.getElementById('claimSection').style.display = 'none';
-
-    // Show the relevant section based on the selected action
-    if (action === 'STAKE') {
-        document.getElementById('stakeSection').style.display = 'block';
-    } else if (action === 'BURN') {
-        document.getElementById('burnSection').style.display = 'block';
-    } else if (action === 'CLAIM') {
-        document.getElementById('claimSection').style.display = 'block';
-    }
-
-    // Update the dropdown text
-    document.getElementById('actionSpan').innerText = action;
-}
