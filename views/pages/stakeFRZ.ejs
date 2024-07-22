@@ -1,8 +1,28 @@
 <div class="pageTitle">
-    <h2><span style="font-weight: 300;">STAKE</span></h2>
+    <h2>
+        <div class="dropdown">
+            
+            <span style="font-weight: 300; cursor: pointer;" id="actionSpan">
+                <svg width="25" height="25" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="50,90 10,10 90,10" style="fill:#1963a81e;stroke:rgb(255, 255, 255);stroke-width:2" />
+                  </svg>
+                  
+                STAKE</span>    
+            <div class="dropdown-content" id="dropdownMenu">
+                <a href="#" onclick="selectAction('STAKE')">
+                    <div style="display: flex; align-content: center;">
+                        STAKE
+                    </div>
+</a>
+                <a href="#" onclick="selectAction('BURN')">
+                    BURN</a>
+                <a href="#" onclick="selectAction('CLAIM')">
+                    CLAIM</a>
+            </div>
+        </div>
+    </h2>
     <h3 class="yr">YOUR</h3>
     <h2>FRZ</h2>
-    
 </div>
 
 <div class="sbc-stat-sectional" >

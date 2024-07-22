@@ -72,7 +72,7 @@ body {
 }
 
 .sidebar nav ul li {
-    margin: 15px 0;
+    margin: 20px 0;
     padding: 10px;
     text-align: center;
     background-color: #1963a839; /* Slightly lighter blue */
@@ -109,9 +109,10 @@ body {
 }
 
 .balance-box {
-    display: flex;
+    display: flex;  
     align-items: center;
     justify-content: space-between;
+    padding: 8px;
 }
 
 .balance-box img {
@@ -124,7 +125,7 @@ body {
     width: 100vw; /* Full width of the viewport */
     height: auto; /* Maintain aspect ratio */
     max-width: 100%;
-    
+    margin-bottom: 200px;
 }
 
 #doclink {
@@ -211,6 +212,54 @@ body {
     border: white 1px solid;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
+    z-index: 10;
+    position: relative;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    z-index: 5;
+    display: none;
+}   
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    z-index: 30;
+        font-weight: 400;
+}
+
+.dropdown-content a {
+    color: honeydew;
+    padding-right: 20px;
+    padding-left: 40px;
+    text-decoration: none;
+    display: block;
+    padding-top: 10px;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f14a;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .yr {

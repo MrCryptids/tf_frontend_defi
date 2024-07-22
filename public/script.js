@@ -75,3 +75,27 @@ const observer = new IntersectionObserver(lazyLoadIframe, {
 // Observe the iframe element
 const iframe = document.getElementById('lazy-iframe');
 observer.observe(iframe);
+
+function selectAction(action) {
+    document.getElementById('actionSpan').textContent = action;
+    document.getElementById('dropdownMenu').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+}
+
+document.getElementById('actionSpan').addEventListener('click', function() {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    const overlay = document.getElementById('overlay');
+    const isVisible = dropdownMenu.style.display === 'block';
+    dropdownMenu.style.display = isVisible ? 'none' : 'block';
+    overlay.style.display = isVisible ? 'none' : 'block';
+});
+
+document.addEventListener('click', function(event) {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    const actionSpan = document.getElementById('actionSpan');
+    const overlay = document.getElementById('overlay');
+    if (!actionSpan.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.style.display = 'none';
+        overlay.style.display = 'none';
+    }
+});
