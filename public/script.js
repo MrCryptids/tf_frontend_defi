@@ -99,3 +99,22 @@ document.addEventListener('click', function(event) {
         overlay.style.display = 'none';
     }
 });
+
+function selectAction(action) {
+    // Hide all sections
+    document.getElementById('stakeSection').style.display = 'none';
+    document.getElementById('burnSection').style.display = 'none';
+    document.getElementById('claimSection').style.display = 'none';
+
+    // Show the relevant section based on the selected action
+    if (action === 'STAKE') {
+        document.getElementById('stakeSection').style.display = 'block';
+    } else if (action === 'BURN') {
+        document.getElementById('burnSection').style.display = 'block';
+    } else if (action === 'CLAIM') {
+        document.getElementById('claimSection').style.display = 'block';
+    }
+
+    // Update the dropdown text
+    document.getElementById('actionSpan').innerText = action;
+}

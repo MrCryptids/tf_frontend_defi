@@ -25,12 +25,18 @@
         <div id="viewFreezers" class="content-section" style="display: none;">
             <%- include('./pages/viewFreezers') %>
         </div>
-        <div id="stakeBurn" class="content-section" style="display: none;">
-            <%- include('./pages/stakeFRZ') %>
-            <%- include('./pages/burnfrETH') %>
-            <%- include('./pages/claim') %>
+        <div id="stakeBurn" class="content-section">
+            <div id="stakeSection" class="section" style="display: block;">
+                <%- include('./pages/stakeFRZ') %>
+            </div>
+            <div id="burnSection" class="section" style="display: none;">
+                <%- include('./pages/burnfrETH') %>
+            </div>
+            <div id="claimSection" class="section" style="display: none;">
+                <%- include('./pages/claim') %>
+            </div>
         </div>
-        <div id="crvFactory" class="content-section" style="display: none;">
+                <div id="crvFactory" class="content-section" style="display: none;">
             <%- include('./pages/crvFactory') %>
         </div>
         <div id="wrapUnwrapETH" class="content-section" style="display: none;">
