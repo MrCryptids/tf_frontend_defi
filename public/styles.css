@@ -72,7 +72,7 @@ body {
 }
 
 .sidebar nav ul li {
-    margin: 20px 0;
+    margin: 30px 0;
     padding: 10px;
     text-align: center;
     background-color: #1963a839; /* Slightly lighter blue */
@@ -198,7 +198,48 @@ body {
 .sbc-stat-sectional {
     display: grid;
     justify-items: center;
-    margin-top: 3%;
+    margin-top: 10%;
+}
+
+.sbc-input-sectional {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;;
+    margin-top: 15%;
+    scale: 3.5;
+    font: inherit;
+}
+
+
+.sbc-bttn {
+    background-color: transparent;
+    color: white    ;
+    margin-top: 15px;
+    border: white 0.5px solid;
+    border-radius: 9px;
+
+}
+
+.sbc-input {
+    background-color: transparent;
+    text-align: center;
+    border: white 0.5px solid;
+    border-radius: 9px;
+    transition: border 0.3s ease-in-out;
+    color: honeydew;
+
+}
+
+.sbc-input:focus {
+    border: 1px solid honeydew ;
+    outline: transparent;
+}
+
+.sbc-box-sectional {
+    display: flex;
+    justify-content: space-around;
 }
 
 .pageTitle h2{
