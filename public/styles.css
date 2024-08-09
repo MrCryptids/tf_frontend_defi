@@ -150,7 +150,7 @@ body {
 .tooltip .tooltiptext {
     visibility: hidden;
     width: fit-content;
-    background-color: #555;
+    background-color: rgb(85, 85, 85, 0.95);
     color: #fff;
     text-align: center;
     border-radius: 5px;
@@ -158,10 +158,10 @@ body {
     position: absolute;
     z-index: 1;
     bottom: 125%; /* Position the tooltip above the text */
-    left: 80%;
-    margin-left: -110px; /* Use margin to center the tooltip */
+    left: 500%; /* Center the tooltip */
+    transform: translateX(-50%);
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 5.3s; /* Ensures visibility remains hidden after opacity transitions */
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -169,6 +169,17 @@ body {
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+    transition-delay: 0s, 0s; /* No delay when showing */
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s, 0s; /* No delay when showing */
+}
+
+.tooltip .tooltiptext {
+    transition-delay: 5s; /* Waits 5 seconds before starting the fade out */
 }
 
 .tooltip .tooltiptext::after {
@@ -313,6 +324,7 @@ body {
 #fridgeIcon {
     max-width: 25%;
     stroke: snow ;
+    margin-left: 10px;
 }
 
 #lazy-iframe {
@@ -371,3 +383,7 @@ body {
     animation: breathing 7s ease-in-out infinite;
   }
   
+
+  #crvLPIcon {
+    margin-left: 25px;
+  }
