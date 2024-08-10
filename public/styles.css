@@ -280,6 +280,18 @@ body {
     display: none;
 }   
 
+.overlayWRAP {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    z-index: 5;
+    display: none;
+}   
+
 body {
     margin: 0;
     padding: 0;
@@ -387,3 +399,22 @@ body {
   #crvLPIcon {
     margin-left: 25px;
   }
+
+  @keyframes spinAndResize {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.2);
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+  
+  .spinningCircle {
+    transform-origin: center;
+    animation: spinAndResize 8s linear infinite;
+  }
+
+ 
