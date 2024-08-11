@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const wrapSection = document.getElementById('wrapSection');
         const unwrapSection = document.getElementById('unwrapSection');
         const actionSpanWRAP = document.getElementById('actionSpanWRAP');
+        const wrapETHTitleLabel = document.getElementById('wrapETH-title-label');
 
         if (wrapSection && unwrapSection) {
             wrapSection.style.display = action === 'WRAP' ? 'block' : 'none';
@@ -21,8 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
             actionSpanWRAP.innerText = action;
         }
 
-        document.body.style.backgroundImage = `url(${backgrounds[action]})`;
+        if (wrapETHTitleLabel) {
+            wrapETHTitleLabel.innerText = action === 'WRAP' ? 'ETH' : 'WETH';
+        }
 
+        document.body.style.backgroundImage = `url(${backgrounds[action]})`;
     };
 
     const actionSpanWRAP = document.getElementById('actionSpanWRAP');
