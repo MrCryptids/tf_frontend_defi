@@ -55,6 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+  
+
 function selectAction(action) {
     // Hide all sections
     document.getElementById('stakeSection').style.display = 'none';

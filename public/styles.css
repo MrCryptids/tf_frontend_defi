@@ -412,9 +412,28 @@ body {
     }
   }
   
-  .spinningCircle {
+  /* .spinningCircle {
     transform-origin: center;
     animation: spinAndResize 8s linear infinite;
+    animation-delay: 0.5ms;
+  } */
+
+  .wrapper-icons {
+    scale: 5;
+    margin-left: 66px;
   }
 
- 
+  .wrapper-sectional-ETH {
+    margin-top: 160px;
+  }
+
+  .wrapper-sectional-WETH {
+    margin-top: 150px;
+  }
+
+  .wrapper-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10%;
+  }

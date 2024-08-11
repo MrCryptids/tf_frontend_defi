@@ -24,16 +24,24 @@
 
 </div>
 
-<div> 
+<div class="wrapper-container"> 
 
     <div id="wrapSection" class="section" style="display: block;">
-        <img src="/images/ethicon.svg" alt="">
-
+        
+        <img class="ETHicon wrapper-icons" src="/images/ethicon.svg" alt="">
+        <div class="sbc-input-sectional wrapper-sectional-ETH">
+            <input class="sbc-input" type="number" name="wrap" id="inputWrapETH">
+            <input class="sbc-bttn" type="button" value="Wrap">
+        </div>    
     </div>
 
     <div id="unwrapSection" class="section" style="display: none;">  
-        <img src="/images/wethIcon.svg" alt="">
-        
+        <img class="WETHicon wrapper-icons spinningCircle" style="margin-left: 59px; transform: translateY(-1.25px);" src="/images/wethIcon.svg" alt="">
+        <div class="sbc-input-sectional wrapper-sectional-WETH">
+            <input class="sbc-input" type="number" name="unwrap" id="inputUnwrapETH">
+            <input class="sbc-bttn" type="button" value="Unwrap">
+        </div>    
+
     </div>
 
 </div>
