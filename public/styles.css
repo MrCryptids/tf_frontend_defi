@@ -252,6 +252,16 @@ body {
     justify-content: space-around;
 }
 
+.balance-icon-wrapper-burn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    margin-left: 8%;
+}
+
 .balance-icon-wrapper {
     display: flex;
     align-items: center;
@@ -270,6 +280,20 @@ body {
     margin-right: 15%;
     scale: 0.7;
 }
+
+.burn-input-sectional {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;;
+    margin-top: 15%;
+    scale: 3.5; 
+    font: inherit;
+    margin-left: 180px;
+    margin-bottom: 180px;
+}
+
 
 .stake-icons {
     scale: 5;
