@@ -3,8 +3,15 @@
         <clipPath id="clip-path">
             <rect id="Rectangle_438" data-name="Rectangle 438" width="24.235" height="33.264" fill="none" />
         </clipPath>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="0.5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
     </defs>
-    <g id="Group_128" data-name="Group 128" clip-path="url(#clip-path)">
+    <g id="Group_128" data-name="Group 128" clip-path="url(#clip-path)" filter="url(#glow)">
         <path id="Path_141" data-name="Path 141" d="M65.617,78.74a.284.284,0,0,1-.284-.284V73.873a.284.284,0,0,1,.14-.245L71.1,70.31a.284.284,0,0,1,.376.409l-5.625,7.9a.284.284,0,0,1-.231.119m.284-4.7v3.532l4.335-6.089Z" transform="translate(-52.963 -56.966)" fill="#fff" />
         <path id="Path_142" data-name="Path 142" d="M65.617,57.581a.284.284,0,0,1-.284-.284V51.416a.284.284,0,0,1,.4-.259l5.625,2.555a.284.284,0,0,1,.027.5l-5.625,3.327a.283.283,0,0,1-.145.04m.284-5.725V56.8L70.628,54Z" transform="translate(-52.963 -41.451)" fill="#fff" />
         <path id="Path_143" data-name="Path 143" d="M71.242,25.233a.289.289,0,0,1-.117-.025L65.5,22.654a.284.284,0,0,1-.167-.259V15.617a.284.284,0,0,1,.527-.146L71.485,24.8a.284.284,0,0,1-.243.43M65.9,22.212l4.626,2.1L65.9,16.639Z" transform="translate(-52.963 -12.43)" fill="#fff" />
@@ -20,5 +27,6 @@
         <path id="Path_153" data-name="Path 153" d="M49.673,131.754a.284.284,0,0,1-.284-.284v-5.333a.284.284,0,1,1,.568,0v5.333a.284.284,0,0,1-.284.284" transform="translate(-40.038 -102.025)" fill="#fff" />
         <path id="Path_154" data-name="Path 154" d="M62.784,134.748a.284.284,0,0,1-.284-.284v-8.993a.284.284,0,1,1,.568,0v8.993a.284.284,0,0,1-.284.284" transform="translate(-50.667 -101.485)" fill="#fff" />
         <path id="Path_155" data-name="Path 155" d="M75.9,130.2a.284.284,0,0,1-.284-.284v-3.944a.284.284,0,1,1,.568,0v3.944a.284.284,0,0,1-.284.284" transform="translate(-61.295 -101.89)" fill="#fff" />
+        <animate attributeName="opacity" values="1;0.5;1" dur="4s" repeatCount="indefinite" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.45 0.05 0.55 0.95;0.45 0.05 0.55 0.95" />
     </g>
-</svg>  
+</svg>

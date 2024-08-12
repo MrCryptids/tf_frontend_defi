@@ -209,7 +209,7 @@ body {
 .sbc-stat-sectional {
     display: grid;
     justify-items: center;
-    margin-top: 10%;
+    margin-top: 50px;
 }
 
 .sbc-input-sectional {
@@ -459,7 +459,13 @@ body {
     }
   }
   
-  .spinningCircle:hover{
+
+  #Ellipse_1  {
+    opacity: 0.5;
+    border: 8px solid #1963a8;
+  }
+
+  .spinningCircle{
     transform-origin: center;
     animation: spinAndResize 8s alternate infinite;
     animation-delay: 1s;

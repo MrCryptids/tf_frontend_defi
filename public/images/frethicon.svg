@@ -3,8 +3,15 @@
         <clipPath id="clip-path">
             <rect id="Rectangle_439" data-name="Rectangle 439" width="34" height="34" transform="translate(0)" fill="none" />
         </clipPath>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="0.5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
     </defs>
-    <g id="Group_130" data-name="Group 130" clip-path="url(#clip-path)">
+    <g id="Group_130" data-name="Group 130" clip-path="url(#clip-path)" filter="url(#glow)">
         <path id="Path_156" data-name="Path 156" d="M124.206,55.678a.206.206,0,0,1-.206-.206V52.443a.206.206,0,0,1,.1-.177l3.717-2.193a.206.206,0,0,1,.273.3l-3.717,5.221a.206.206,0,0,1-.168.086m.206-3.117v2.266l2.782-3.907Z" transform="translate(-106.653 -43.17)" fill="#fff" />
         <path id="Path_157" data-name="Path 157" d="M124.206,36.911A.206.206,0,0,1,124,36.7V32.818a.206.206,0,0,1,.291-.187l3.717,1.688a.206.206,0,0,1,.02.365l-3.717,2.2a.207.207,0,0,1-.1.029m.206-3.773v3.206l3.066-1.814Z" transform="translate(-106.653 -28.132)" fill="#fff" />
         <path id="Path_158" data-name="Path 158" d="M127.923,6.579a.2.2,0,0,1-.085-.018l-3.717-1.688A.206.206,0,0,1,124,4.685V.206A.206.206,0,0,1,124.383.1L128.1,6.267a.206.206,0,0,1-.177.312m-3.511-2.027L127.4,5.912,124.412.947Z" transform="translate(-106.653 0)" fill="#fff" />
@@ -53,5 +60,6 @@
         <path id="Path_201" data-name="Path 201" d="M145.574,71.251a.206.206,0,0,1-.2-.237l.777-5.062a.206.206,0,0,1,.4-.02l.879,3.406a.206.206,0,0,1-.054.2l-1.656,1.656a.206.206,0,0,1-.146.06m.829-4.245-.529,3.448L147,69.327Z" transform="translate(-125.086 -56.742)" fill="#fff" />
         <path id="Path_202" data-name="Path 202" d="M156.046,64.812a.206.206,0,0,1-.2-.155l-.9-3.517a.206.206,0,0,1,.272-.244l3.214,1.206a.206.206,0,0,1,.073.339l-2.311,2.311a.206.206,0,0,1-.146.06m-.6-3.392.715,2.784,1.829-1.829Z" transform="translate(-133.34 -52.52)" fill="#fff" />
         <path id="Path_203" data-name="Path 203" d="M158.356,53.352a.207.207,0,0,1-.072-.013l-3.214-1.206a.206.206,0,0,1,.023-.393l5.877-1.457a.206.206,0,0,1,.2.346L158.5,53.292a.206.206,0,0,1-.146.06m-2.52-1.372,2.468.927,2.045-2.045Z" transform="translate(-133.34 -43.371)" fill="#fff" />
+        <animate attributeName="opacity" values="1;0.5;1" dur="4s" repeatCount="indefinite" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.45 0.05 0.55 0.95;0.45 0.05 0.55 0.95" />
     </g>
-</svg>  
+</svg>
