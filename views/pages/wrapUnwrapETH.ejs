@@ -27,8 +27,15 @@
 <div class="wrapper-container"> 
 
     <div id="wrapSection" class="section" style="display: block;">
-        
-        <img class="ETHicon wrapper-icons" src="/images/ethicon.svg" alt="">
+        <div class="wrapper-balance-box">
+            <img class="ETHicon wrapper-icons spinningCircle" src="/images/ethicon.svg" alt="">
+           <div class="wrapper-balance-divider">
+           </div>
+            <h2  class="wrapper-balance-label">
+                ETH Balance: <br>
+                <span class="wrapper-balance-num" id="ETHbalanceWrapper">0</span>
+            </h2>
+        </div>
         <div class="sbc-input-sectional wrapper-sectional-ETH">
             <input class="sbc-input" type="number" name="wrap" id="inputWrapETH">
             <input class="sbc-bttn" type="button" value="Wrap">
@@ -36,7 +43,15 @@
     </div>
 
     <div id="unwrapSection" class="section" style="display: none;">  
-        <img class="WETHicon wrapper-icons spinningCircle" style="margin-left: 59px; transform: translateY(-1.25px);" src="/images/wethIcon.svg" alt="">
+        <div class="wrapper-balance-box">
+            <img class="WETHicon wrapper-icons spinningCircle" src="/images/wethIcon.svg" alt="">
+            <div class="wrapper-balance-divider">
+            </div> 
+            <h2 class="wrapper-balance-label">
+                WETH Balance: 
+                <span class="wrapper-balance-num" id="WETHbalanceWrapper">0</span>
+            </h2>
+        </div>
         <div class="sbc-input-sectional wrapper-sectional-WETH">
             <input class="sbc-input" type="number" name="unwrap" id="inputUnwrapETH">
             <input class="sbc-bttn" type="button" value="Unwrap">
