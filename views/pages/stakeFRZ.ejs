@@ -24,13 +24,29 @@
     <h2>FRZ</h2>
 </div>
 <div class="sbc-box-sectional">
-    <div class="sbc-input-sectional">
-        <input class="sbc-input" type="number" name="stake" id="inputStake">
-        <input class="sbc-bttn" type="button" value="Stake">
+    <div class="balance-icon-wrapper">
+        <img class="FRZicon stake-icons spinningCircle" src="/images/frzicon.svg" alt="">
+        <div class="balance-wrapper">
+            <h2 class="wrapper-balance-label">
+                FRZ Wallet Balance: 
+                <span class="wrapper-balance-num" id="FRZbalanceStaked-Wallet">0</span>
+            </h2>
+            <h2 class="wrapper-balance-label">
+                FRZ Staked Balance: 
+                <span class="wrapper-balance-num" id="FRZbalanceStaked">0</span>
+            </h2>
+        </div>
     </div>
-    <div class="sbc-input-sectional">
-        <input class="sbc-input" type="number" name="unstake" id="inputUnstake">
-        <input class="sbc-bttn" type="button" value="Unstake">
+    <div class="stake-unstake-wrapper">
+        <div class="sbc-input-sectional">
+            <input class="sbc-input" type="number" name="stake" id="inputStake">
+            <input class="sbc-bttn" type="button" value="Stake">
+        </div>
+
+        <div class="sbc-input-sectional" style="margin-top: 170px;">
+            <input class="sbc-input" type="number" name="unstake" id="inputUnstake">
+            <input class="sbc-bttn" type="button" value="Unstake">
+        </div>
     </div>
 </div>
 

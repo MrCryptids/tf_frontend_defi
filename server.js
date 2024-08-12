@@ -14,5 +14,5 @@ app.get('/pages/:page', (req, res) => {
 app.get('/', (req, res) => {
     res.render('index', { iframeSrc: 'https://curve.fi/#/ethereum/pools/factory-crypto-65' });});
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4200;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

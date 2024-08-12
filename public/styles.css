@@ -240,7 +240,6 @@ body {
     border-radius: 9px;
     transition: border 0.3s ease-in-out;
     color: honeydew;
-
 }
 
 .sbc-input:focus {
@@ -252,6 +251,30 @@ body {
     display: flex;
     justify-content: space-around;
 }
+
+.balance-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+}
+
+.stake-unstake-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10%;
+    flex-direction: column;
+    margin-right: 15%;
+    scale: 0.7;
+}
+
+.stake-icons {
+    scale: 5;
+    margin-right: 150px;
+  }
 
 .pageTitle h2{
     font-size: 3em;
