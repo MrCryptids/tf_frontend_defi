@@ -1,14 +1,20 @@
-<h1>View Freezers</h1>
+<div class="pageTitle">
+    <h2>
+        <span style="font-weight: 300;">VIEW</span>
+    </h2>
+    <h3 class="yr">YOUR</h3>
+    <h2 id="freezer-title-label">FREEZER</h2>
+</div>
 <div class="freezer-grid">
   <% freezers.forEach(function(freezer) { %>
     <div class="freezer-badge">
       <img src="<%= freezer.imageUrl %>" alt="Freezer NFT Image" class="freezer-image">
       <div class="freezer-info">
-        <h3><%= freezer.name %></h3>
+        <h3 style="text-align: center;"><%= freezer.name %></h3>
         <ul>
           <li><strong>Lock Date:</strong> <%= freezer.lockDate %></li>
           <li><strong>Unlock Date:</strong> <%= freezer.unlockDate %></li>
-          <li><strong>WETH Locked:</strong> <%= freezer.wethLocked %> WETH</li>
+          <li><strong>WETH Locked:</strong> <%= freezer.wethLocked %></li>
         </ul>
       </div>
     </div>

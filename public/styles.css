@@ -561,6 +561,8 @@ body {
   
   .freezer-badge:hover {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+    cursor: pointer;
   }
   
   .freezer-badge:hover::before {
@@ -579,7 +581,7 @@ body {
 
   .freezer-image {
     width: 100%;
-    height: 200px;
+    height: 60%;
     object-fit: cover;
   }
 
@@ -599,3 +601,13 @@ body {
   .freezer-info li {
     margin-bottom: 5px;
   }
+
+  .doc-image-container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .doc-image-container img {
+    mix-blend-mode: overlay;
+  }
+  

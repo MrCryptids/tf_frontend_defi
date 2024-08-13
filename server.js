@@ -16,14 +16,14 @@ app.get('/', (req, res) => {
     const freezers = [
         {
           name: "Freezer 1",
-          imageUrl: "./images/chartplaceholder.png",
+          imageUrl: "./images/frETHreveallottie.svg",
           lockDate: "2023-01-01",
           unlockDate: "2026-01-01",
           wethLocked: 2
         },
         {
             name: "Freezer 2",
-            imageUrl: "./images/chartplaceholder.png",
+            imageUrl: "./images/frETHreveallottie.svg",
             lockDate: "2023-05-23",
             unlockDate: "2024-01-23",
             wethLocked: 0.8453
