@@ -1,7 +1,16 @@
-<div class="mc-box">
-
-
-<h2>View Freezers</h2>
-<p>This is the View Freezers page content.</p>
-TEST TEST
+<h1>View Freezers</h1>
+<div class="freezer-grid">
+  <% freezers.forEach(function(freezer) { %>
+    <div class="freezer-badge">
+      <img src="<%= freezer.imageUrl %>" alt="Freezer NFT Image" class="freezer-image">
+      <div class="freezer-info">
+        <h3><%= freezer.name %></h3>
+        <ul>
+          <li><strong>Lock Date:</strong> <%= freezer.lockDate %></li>
+          <li><strong>Unlock Date:</strong> <%= freezer.unlockDate %></li>
+          <li><strong>WETH Locked:</strong> <%= freezer.wethLocked %> WETH</li>
+        </ul>
+      </div>
+    </div>
+  <% }); %>
 </div>
