@@ -174,3 +174,33 @@ const observer = new IntersectionObserver(lazyLoadIframe, {
 // Observe the iframe element
 const iframe = document.getElementById('lazy-iframe');
 observer.observe(iframe);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const freezerGrid = document.querySelector('.freezer-grid');
+    const modal = document.getElementById('freezerModal');
+    const modalContent = document.getElementById('modalFreezerBadge');
+    const closeBtn = document.querySelector('.close');
+  
+    freezerGrid.addEventListener('click', function(e) {
+        const freezerBadge = e.target.closest('.freezer-badge');
+        if (freezerBadge) {
+          const clonedBadge = freezerBadge.cloneNode(true);
+          clonedBadge.classList.remove('freezer-badge');
+          clonedBadge.classList.add('modal-freezer-badge');
+          modalContent.innerHTML = '';
+          modalContent.appendChild(clonedBadge);
+          modal.style.display = 'block';
+        }
+      });
+  
+    closeBtn.onclick = function() {
+      modal.style.display = 'none';
+    }
+  
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+  });
+  
