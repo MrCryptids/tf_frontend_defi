@@ -606,13 +606,13 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 15%;
+    margin-top: 10%;
   }
 
 
   .WETHicon {
-    margin-left: 39px;
-    transform: translateY(-0.76px);
+    margin-left: 30px;
+    transform: translateY(-0.85px);
 
   }
 
