@@ -7,8 +7,8 @@
 </div>
 <div class="freezer-grid">
   <% freezers.forEach(function(freezer) { %>
-    <div class="freezer-badge">
-      <img src="<%= freezer.imageUrl %>" alt="Freezer NFT Image" class="freezer-image">
+    <div class="freezer-badge" data-unlock-date="<%= freezer.unlockDate %>">
+        <img src="<%= freezer.imageUrl %>" alt="Freezer NFT Image" class="freezer-image">
       <div class="freezer-info">
         <h3 style="text-align: center;"><%= freezer.name %></h3>
         <ul>

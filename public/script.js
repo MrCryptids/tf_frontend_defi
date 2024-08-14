@@ -204,3 +204,32 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
+
+  function getBackgroundColor(unlockDate) {
+    const today = new Date();
+    const unlockDateObj = new Date(unlockDate);
+    const diffYears = (unlockDateObj - today) / (1000 * 60 * 60 * 24 * 365);
+
+    if (unlockDateObj < today) {
+        return 'red';
+    } else if (diffYears <= 1) {
+        return 'green';
+    } else if (diffYears <= 2) {
+        return 'blue';
+    } else {
+        return '';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const freezerBadges = document.querySelectorAll('.freezer-badge');
+    console.log('Number of freezer badges:', freezerBadges.length);
+    freezerBadges.forEach(badge => {
+        const unlockDate = badge.dataset.unlockDate;
+        console.log('Unlock date:', unlockDate);
+        const color = getBackgroundColor(unlockDate);
+        console.log('Calculated color:', color);
+        badge.style.backgroundImage = `url(/images/gradientbg${color}.png)`;
+        badge.classList.add('animated-background');
+    });
+});

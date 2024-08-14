@@ -512,6 +512,17 @@ body {
     text-decoration: none;
   }
   
+  .animated-background {
+    background-size: 200% 200%;
+    animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
 
 @keyframes breathing {
     0% {
@@ -631,6 +642,7 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
     overflow: hidden;
+
   }
 
   .freezer-badge::before {
